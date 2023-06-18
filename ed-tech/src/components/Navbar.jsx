@@ -1,7 +1,7 @@
 import { Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, HStack, Image, Spacer, Stack, Text, useDisclosure } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import {Link} from "react-router-dom";
-import logo from '../images/CODE-logo.png'
+import logo from '../images/CODE.png'
 import React, { useContext } from 'react'
 import { AuthContext } from '../Context/AuthContextProvider';
 
@@ -11,6 +11,7 @@ const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     return (
+        <div style={{backgroundColor : "#FFB266"}}>
         <div style={{fontFamily: "Montserrat, sans-serif"}}>
             <Flex minWidth='max-content' alignItems='center' gap='7' px={5}>
                 <HStack>
@@ -44,44 +45,27 @@ const Navbar = () => {
                                             Testing
                                         </Link>
                                     </Text>
-                                    <Text fontSize="xl" _hover={{color: "#9d9b9e"}}>
-                                        <Link to='/ittraining'>
-                                            Product and Projects
-                                        </Link>
-                                    </Text>
-                                    <Text fontSize="xl" _hover={{color: "#9d9b9e"}}>
-                                        <Link to='/ittraining'>
-                                            IT Architecture
-                                        </Link>
-                                    </Text>
-                                    <Text fontSize="xl" _hover={{color: "#9d9b9e"}}>Blockchain</Text>
-                                    <Text fontSize="xl" _hover={{color: "#9d9b9e"}}>Marketing</Text>
-                                    <Text fontSize="xl" _hover={{color: "#9d9b9e"}}>
-                                        <Link to='/design'>
-                                            Design
-                                        </Link>
-                                    </Text>
-                                    <Text fontSize="xl" _hover={{color: "#9d9b9e"}}>Games</Text>
+                                   
                                 </Stack>
                             </DrawerBody>
                         </DrawerContent>
                     </Drawer>
                     <Link to='/'>
-                        <Image src={logo} alt='geek-brains-logo' width={200} />
+                        <Image src={logo} alt='CODE' width={125} />
                     </Link>
                 </HStack>
-                <Text fontSize="xl" fontWeight={700} _hover={{color: "#9d9b9e"}}  onClick={onOpen}>Programs</Text>
+                <Text fontSize="xl" fontWeight={700} _hover={{color: "#9d9b9e"}}  onClick={onOpen}>Courses</Text>
                 {
                     isAuth ? (
                         <Link to={`/users/${user.id}`}>
-                            <Text fontSize="xl" fontWeight={700} _hover={{color: "#9d9b9e"}}>My Learning</Text>
+                            <Text fontSize="xl" fontWeight={700} _hover={{color: "#9d9b9e"}}>Blogs</Text>
                         </Link>
                     ) : (
                         null
                     )
                 }
-                <Text fontSize="xl" fontWeight={700} _hover={{color: "#9d9b9e"}}>Events</Text>
-                <Text fontSize="xl" fontWeight={700} _hover={{color: "#9d9b9e"}}>Job Search</Text>
+                
+                <Text fontSize="xl" fontWeight={700} _hover={{color: "#9d9b9e"}}>About</Text>
                 <Spacer />
                 {
                     isAuth ? (
@@ -102,13 +86,14 @@ const Navbar = () => {
                             <Spacer />
                             <Button colorScheme='gray' _hover={{backgroundColor: "black", color: "white"}}>
                                 <Link to="/register" style={{textDecoration: "none"}}>
-                                    Registration
+                                    SignUp
                                 </Link>
                             </Button>
                         </HStack>
                     )
                 }
             </Flex>
+        </div>
         </div>
     )
 }
