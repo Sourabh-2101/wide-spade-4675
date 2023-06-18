@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;300;400;500;600&family=Montserrat:wght@200;300;400;500;600;700&family=Varela&display=swap');
+
+body{
+  font-family: 'Lexend Deca','Montserrat', 'Varela', sans-serif;
+}
+
 .App {
   text-align: center;
 }
