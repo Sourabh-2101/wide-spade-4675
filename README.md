@@ -6,7 +6,7 @@ https://easy-tan-hare-kilt.cyclic.app/
 # wide-spade-4675
 
 ### Depoyed Link : 
-The project is deployed on netlify - 
+The project is deployed on netlify -  https://singular-youtiao-72e472.netlify.app/
 
 
 ### Description
